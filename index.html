@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InFocus Solutions</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #003366;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #0055aa;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .cta {
+      background-color: #0055aa;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .cta a {
+      background: white;
+      color: #0055aa;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .lang-switch {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .lang-switch button {
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #003366;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .lang-switch button:hover {
+      background-color: #0055aa;
+    }
+    .arabic {
+      direction: rtl;
+      text-align: right;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>InFocus Solutions</h1>
+    <p>Clarity. Precision. Impact.</p>
+  </header>
+
+  <div class="lang-switch">
+    <button onclick="switchLang('english')">🇺🇸 English</button>
+    <button onclick="switchLang('arabic')">🇸🇦 العربية</button>
+  </div>
+
+  <!-- English Content -->
+  <section id="english">
+    <!-- ... existing English content ... -->
+  </section>
+
+  <!-- Arabic Content -->
+  <section id="arabic" class="arabic" style="display:none">
+    <!-- ... existing Arabic content ... -->
+  </section>
+
+  <div class="cta">
+    <p>Need professional, impactful content?</p>
+    <a href="mailto:hello@infocus.solutions">Book your free consultation</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 InFocus Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.getElementById("english").style.display = lang === 'english' ? 'block' : 'none';
+      document.getElementById("arabic").style.display = lang === 'arabic' ? 'block' : 'none';
+    }
+    window.onload = () => switchLang('english');
+  </script>
+</body>
+</html>
